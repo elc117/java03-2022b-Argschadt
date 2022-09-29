@@ -1,36 +1,47 @@
-import java.util.ArrayList;
+public class TeamMate {
+    private String userId;
+    private String name;
+    private Boolean online;
+  
+    public TeamMate() {
+        this.userId = "999999";
+        this.name = "undefinied";
+        this.online = false;
+    }
+  
+    public TeamMate(String userId, String name) {
+        this.userId = userId;
+        this.name = name;
+        this.online = false;
+    }
+  
+    public TeamMate(String userId, String name, boolean online) {
+        this.userId = userId;
+        this.name = name;
+        this.online = online;
+    }
+  
+    public String getUserId() {
+        return this.userId;
+    }
+  
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+  
+    public String getName() {
+        return this.name;
+    }
+    
+    public void setName(String name) {
+        this.name = name;
+    }
 
-public class ListOfTeamMates{
-	public static void main(String[] args) {
-		ArrayList<TeamMate> list = new ArrayList<TeamMate>();
-		
-		TeamMate a = new TeamMate("1", "Name 1", false);
-		list.add(a);
-		
-		for (int i = 0; i < 20; i++) {
-	      list.add(new TeamMate("" + (i+2), "Name " + (i+2), false));
-	    }
-		
-		for (int i = 0; i < 20; i++) {
-	      list.add(new TeamMate("" + (i+22), "Name " + (i+22), true));
-	    }
-		
-		System.out.println("---");
-	    for (int i = 0; i < list.size(); i++) {
-	      System.out.println(list.get(i).getName());
-	    }
-	    
-	    for (TeamMate item : list) {
-	    	if(item.online == true) {
-	    		System.out.println(item.getUserId());
-	    	}
-	    }
-	    
-	    list.remove(0);
-	    
-	    System.out.println("Elemento 0 removido");
-	    for (int i = 0; i < list.size(); i++) {
-	      System.out.println(list.get(i).getName());
-	    }
-	}
-}
+    public boolean getOnline() {
+        return this.online;
+    }
+    
+    public void setOnline(Boolean online) {
+        this.online = online;
+    }
+  }

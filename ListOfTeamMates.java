@@ -21,7 +21,7 @@ public class ListOfTeamMates{
 	    }
 	    
 	    for (TeamMate item : list) {
-	    	if(item.online == true) {
+	    	if(item.getOnline() == true) {
 	    		System.out.println(item.getUserId());
 	    	}
 	    }
